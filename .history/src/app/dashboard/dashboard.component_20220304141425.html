@@ -1,0 +1,300 @@
+<div class="page-header">
+  <h3 class="page-title">
+    <span class="page-title-icon bg-gradient-primary text-white mr-2">
+      <i class="mdi mdi-home"></i>                 
+    </span>
+    Dashboard
+  </h3>
+  <nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">
+        <span></span>Overview
+        <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
+      </li>
+    </ul> 
+  </nav>
+</div>
+<div class="row">
+  <div class="col-md-4 stretch-card grid-margin">
+    <div class="card bg-gradient-danger card-img-holder text-white">
+      <div class="card-body">
+        <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image"/>
+        <h4 class="font-weight-normal mb-3">Total Voters
+          <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+        </h4>
+        <h2 class="mb-5">60,000</h2>
+          <h6 class="card-text">Votes 80%</h6>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 stretch-card grid-margin">
+    <div class="card bg-gradient-info card-img-holder text-white">
+      <div class="card-body">
+        <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image"/>                  
+        <h4 class="font-weight-normal mb-3">Total Ward
+          <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
+        </h4>
+        <h2 class="mb-5">9</h2>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 stretch-card grid-margin">
+    <div class="card bg-gradient-success card-img-holder text-white">
+      <div class="card-body">
+        <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image"/>                                    
+        <h4 class="font-weight-normal mb-3">Polling Stations
+          <i class="mdi mdi-diamond mdi-24px float-right"></i>
+        </h4>
+        <h2 class="mb-5">95</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-7 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex flex-wrap justify-content-between">
+          <h4 class="card-title">Candidates</h4>
+          <div id="visit-sale-chart-legend" class="rounded-legend legend-horizontal">
+            <ul>
+              <li>
+                <span class="legend-dots"></span>mwenda
+              </li>
+              <li>
+                <span class="legend-dots"></span>Tony
+              </li>
+              <li class="mr-0">
+                <span class="legend-dots"></span>Muchui
+              </li>
+            </ul>
+          </div>
+        </div>
+        <canvas baseChart #visitSaleChart [chartType]="'bar'" [datasets]="visitSaleChartData" [labels]="visitSaleChartLabels" [options]="visitSaleChartOptions" [colors]="visitSaleChartColors"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-5 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Call Status</h4>
+        <canvas baseChart [chartType]="'doughnut'" [datasets]="trafficChartData" [labels]="trafficChartLabels" [options]="trafficChartOptions" [colors]="trafficChartColors"></canvas>
+        <div id="traffic-chart-legend" class="rounded-legend legend-vertical legend-bottom-left pt-4">
+          <ul>
+            <li>
+              <span class="legend-dots"></span>Picked
+              <span class="float-right">60%</span>
+            </li>
+            <li>
+              <span class="legend-dots"></span>Invalid
+              <span class="float-right">10%</span>
+            </li>
+            <li>
+              <span class="legend-dots"></span>Missed
+              <span class="float-right">15%</span>
+            </li>
+            <li>
+              <span class="legend-dots"></span>Unreachable
+              <span class="float-right">15%</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+
+
+<div class="row">
+  <div class="col-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Candidates Status</h4>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>
+                  Candidates
+                </th>
+                <th>
+                  votes
+                </th>
+                <th>
+                  percentage %
+                </th>
+                <th>
+                  Last Update
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Tonny
+                </td>
+                <td>
+                  21600
+                </td>
+                <td>
+          <label class="badge badge-gradient-warning">45</label>
+                </td>
+                <td>
+                  OCT 1, 2021
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Mwenda
+                </td>
+                <td>
+                  4800
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">10</label>
+                </td>
+                <td>
+                  OCT 1, 2021
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Muchui
+                </td>
+                <td>
+                  9600
+                </td>
+                <td>
+                  <label class="badge badge-gradient-info">20</label>
+                </td>
+                <td>
+                  OCT 1, 2021
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Ward Opinions</h4>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>
+                  Ward
+                </th>
+                <th>
+                  Electricity
+                </th>
+                <th>
+                  Water
+                </th>
+                <th>
+                  Road
+                </th>
+                <th>
+                  Agricalture
+                </th>
+                <th>
+                  Jobs
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Kiagu
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+                <td>
+              <label class="badge badge-gradient-warning">19</label>
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Mikinduri
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  muthaara
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Runda
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+               <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+                <td>
+                  <label class="badge badge-gradient-warning">19</label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
